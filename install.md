@@ -2,8 +2,9 @@
 
 USBメモリで配布するもの
 
-* NOOBS
-* Fritzing
+* NOOBS 1.3.11（1.3.12は未検証）
+* Fritzing (Windows, Mac)
+* SD formatter
 
 ## OSのインストール
 

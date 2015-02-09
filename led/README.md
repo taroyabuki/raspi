@@ -26,13 +26,13 @@ echo 1 > /sys/class/gpio/gpio25/value
 
 オフ
 
-```bash
+```sh
 echo 0 > /sys/class/gpio/gpio25/value
 ```
 
 点滅
 
-```bash
+```sh
 while :
 do
   echo 1 > /sys/class/gpio/gpio25/value
@@ -44,20 +44,32 @@ done
 
 利用終了
 
-```bash
+```sh
 echo 25 > /sys/class/gpio/unexport
 exit
 ```
 
 ## 操作（`led2.py`）
 
+```sh
+sudo python led2.py
+```
+
 ## タクトスイッチ（`tact.py`）
 
 ![](image/tact_a.png)
 
+```sh
+sudo python tact.py
+```
+
 ## タクトスイッチ＋プルダウン抵抗（`tact-pulldown.py`）
 
 ![](image/tact-pulldown_a.png)
+
+```sh
+sudo python tact-pulldown.py
+```
 
 ## タクトスイッチ + LED（`tact-led.py`）
 
@@ -66,6 +78,18 @@ exit
 
 ![](image/tact-led_a.png)
 
+```sh
+sudo python tact-led.py
+```
+
 ## トグルスイッチ（`toggle.py`）
 
+```sh
+sudo python toggle.py
+```
+
 ## イベント（`event.py`）
+
+```sh
+sudo python event.py
+```

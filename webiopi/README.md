@@ -1,6 +1,8 @@
 # WebIOPI
 
-## インストール
+Raspberry Pi 2では動作しない（2015/02/9）。
+
+## インストールと起動・停止
 
 ```sh
 wget "http://downloads.sourceforge.net/project/webiopi/WebIOPi-0.7.0.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fwebiopi%2Ffiles%2F&ts=1423473182&use_mirror=cznic" -O WebIOPi-0.7.0.tar.gz
@@ -9,17 +11,17 @@ cd WebIOPi-0.7.0
 sudo ./setup.sh
 ```
 
-## 起動と停止
+### 起動
 
 ```sh
 sudo webiopi -d -c /etc/webiopi/config
 ```
 
+### 停止
+
 `Ctrl-C`で停止する。
 
 ## DEMO
-
-not work on raspi 2?
 
 1. `http://RaspberryPiのIPアドレス:8000/`にアクセスする。
 1. LEDの回路で、GPIO 25のオン・オフを試す。
@@ -46,43 +48,14 @@ doc-root = /home/pi/webiopi/htdocs
 
 `~/webiopi/htdocs/hello.html`を作成する。
 
-```html:hello.html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hello</title>
-</head>
-<body>
-  <p>Hello, World.</p>
-</body>
-</html>
-```
-
 `http://RaspberryPiのIPアドレス:8000/hello.html`にアクセスする。
 
 ## トグルスイッチ
 
 ### Pythonスクリプト
 
-`~/webiopi/switch.py`を作成する。
-
-```python:switch.py
-import webiopi
-
-GPIO = webiopi.GPIO
-LIGHT = 25
-
-def setup():
-  GPIO.setFunction(LIGHT, GPIO.OUT)
-
-def loop():
-  webiopi.sleep(1)
-
-def destroy():
-    GPIO.digitalWrite(LIGHT, GPIO.LOW)
-```
-
-`switch.py`を`/etc/webiopi/config`に登録する。
+1. `~/webiopi/switch.py`を作成する。
+1. `switch.py`を`/etc/webiopi/config`に登録する。
 
 ```
 myscript = /home/pi/webiopi/switch.py
@@ -92,43 +65,6 @@ myscript = /home/pi/webiopi/switch.py
 
 `~/webiopi/htdocs/switch.html`を作成する。
 
-```html:switch.html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Switch</title>
-  <script src="/webiopi.js"></script>
-  <style>
-  * { margin: 0px; padding: 0px;
-  }
-  #gpio25 {
-    position: absolute;
-    width:160px; height: 100px;
-    top: 50%; left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: large;
-  }
-  #gpio25.LOW {
-    color: black; background-color: white;
-  }
-  #gpio25.HIGH {
-    color: white; background-color: Red;
-  }
-  </style>
-</head>
-<body>
-  <div id="controls"></div>
-  <script>
-  webiopi().ready(function() {
-    var button = webiopi().createGPIOButton(25, "On / Off");
-    $("#controls").append(button);
-    webiopi().refreshGPIO(false);
-  });
-  </script>
-</body>
-</html>
-```
 ### 動作確認
 
 1. WebIOPiを再起動して、`http://RaspberryPiのIPアドレス:8000/switch.html`にアクセスする。

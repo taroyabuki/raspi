@@ -5,7 +5,7 @@
 1. [インストール](install.md)
 1. [Lチカ](led)
 1. [Mathematica](mathematica.md)
-1. [WebIOPi](webiopi.md)
+1. [WebIOPi](webiopi)
 
 ## 第2回
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Switch</title>
+  <script src="/webiopi.js"></script>
+  <style>
+  * { margin: 0px; padding: 0px;
+  }
+  #gpio25 {
+    position: absolute;
+    width:160px; height: 100px;
+    top: 50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: large;
+  }
+  #gpio25.LOW {
+    color: black; background-color: white;
+  }
+  #gpio25.HIGH {
+    color: white; background-color: Red;
+  }
+  </style>
+</head>
+<body>
+  <div id="controls"></div>
+  <script>
+  webiopi().ready(function() {
+    var button = webiopi().createGPIOButton(25, "On / Off");
+    $("#controls").append(button);
+    webiopi().refreshGPIO(false);
+  });
+  </script>
+</body>
+</html>
