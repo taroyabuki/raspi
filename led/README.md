@@ -51,19 +51,19 @@ exit
 
 ## 操作（Python）
 
-<src/led2.py>
+<led2.py>
 
 ## タクトスイッチ
 
 ![](image/tact_a.png)
 
-<src/tact.py>
+<tact.py>
 
 ## タクトスイッチ＋プルダウン抵抗
 
 ![](image/tact-pulldown_a.png)
 
-<src/tact-pulldown.py>
+<tact-pulldown.py>
 
 ## タクトスイッチ + LED
 
@@ -72,12 +72,12 @@ exit
 
 ![](image/tact-led_a.png)
 
-<src/tact-led.py>
+<tact-led.py>
 
 ## トグルスイッチ
 
-<src/toggle.py>
+<toggle.py>
 
 ## イベント
 
-<src/event.py>
+<event.py>
