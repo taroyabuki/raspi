@@ -2,13 +2,13 @@
 
 ## ロボットは東大に入れるか
 
-$z$軸を軸とする半径$1$の円柱の側面で，$xy$平面より上（$z$軸の正の方向）にあり，平面$x-\sqrt{3}y+z=1$より下（$z$軸の負の方向）にある部分を$D$とする．$D$の面積を求めよ．（1976年 東大入試 理科第5問 新過程）
+z軸を軸とする半径1の円柱の側面で、xy平面より上（z軸の正の方向）にあり、平面x-√3y+z=1より下（z軸の負の方向）にある部分をDとする。Dの面積を求めよ。（1976年 東大入試 理科第5問 新過程）
 
-```
+```bash
 wolfram
 ```
 
-```
+```mathematica
 Area[ImplicitRegion[And[
     x^2 + y^2 == 1,
     z >= 0,
@@ -18,9 +18,9 @@ Area[ImplicitRegion[And[
 
 ## LED
 
-not work on RaspPi 2?
+Raspberry Pi 2では動かない（2015/02/09）。
 
-```
+```mathematica
 DeviceConfigure["GPIO", 25 -> "Output"]
 
 Do[
