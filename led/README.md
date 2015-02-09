@@ -49,35 +49,23 @@ echo 25 > /sys/class/gpio/unexport
 exit
 ```
 
-## 操作（Python）
+## 操作（`led2.py`）
 
-<led2.py>
-
-## タクトスイッチ
+## タクトスイッチ（`tact.py`）
 
 ![](image/tact_a.png)
 
-<tact.py>
-
-## タクトスイッチ＋プルダウン抵抗
+## タクトスイッチ＋プルダウン抵抗（`tact-pulldown.py`）
 
 ![](image/tact-pulldown_a.png)
 
-<tact-pulldown.py>
-
-## タクトスイッチ + LED
+## タクトスイッチ + LED（`tact-led.py`）
 
 1. タクトスイッチの動作確認のために、スイッチを押すとLEDが光る単純な回路を作ってみる。
 1. スイッチが押されているかどうかをRaspberry Piで判断するような回路を作る。（この後でトグルスイッチを作る準備である。）
 
 ![](image/tact-led_a.png)
 
-<tact-led.py>
+## トグルスイッチ（`toggle.py`）
 
-## トグルスイッチ
-
-<toggle.py>
-
-## イベント
-
-<event.py>
+## イベント（`event.py`）
