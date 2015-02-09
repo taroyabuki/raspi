@@ -3,7 +3,7 @@
 ## 第1回
 
 1. [インストール](install.md)
-1. [Lチカ](led.md)
+1. [Lチカ](led)
 1. [Mathematica](mathematica.md)
 1. [WebIOPi](webiopi.md)
 

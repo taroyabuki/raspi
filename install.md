@@ -24,12 +24,12 @@ USBメモリで配布するもの
 
 ## PCからの接続
 
-1. <http://sourceforge.jp/projects/ttssh2/>からインストーラをダウンロードし、実行するインストールする。
+1. <http://sourceforge.jp/projects/ttssh2/>からインストーラをダウンロードし、実行してインストールする。
 1. TeraTermからRaspberry Piに接続する。
 
-## for Raspberry Pi 2
+## Raspberry Pi 2のための補足（2015/02/09）
 
-http://blog.adafruit.com/2015/02/05/how-to-fix-error-loading-rpi-gpio-python-library-on-your-brand-new-raspberry-pi-2/
+GPIOが正式にサポートされるまでは、<http://blog.adafruit.com/2015/02/05/how-to-fix-error-loading-rpi-gpio-python-library-on-your-brand-new-raspberry-pi-2/>の方法でGPIOを有効にする。
 
 ## テキスト編集環境
 
