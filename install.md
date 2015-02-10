@@ -2,9 +2,10 @@
 
 USBメモリで配布するもの
 
-* NOOBS 1.3.11（1.3.12は未検証）
+* NOOBS 1.3.12
 * Fritzing (Windows, Mac)
-* SD formatter
+* SD formatter (Windows, Mac)
+* TeraTerm
 
 ## OSのインストール
 
