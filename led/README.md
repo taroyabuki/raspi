@@ -60,6 +60,8 @@ sudo python led2.py
 
 ## タクトスイッチ
 
+**LEDを光らせた回路はそのままにしておいてよい。**
+
 ![](image/tact_a.png)
 
 GPIO 24でスイッチの状態を読み取る。
