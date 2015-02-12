@@ -10,11 +10,15 @@
 
 ![](image/led2_a.png)
 
-GPIO 25を利用可能にし、出力用にする。
+GPIO 25の利用を開始する。
 
-```bash
-sudo su
+```sh
 echo 25 > /sys/class/gpio/export
+```
+
+出力用にする。
+
+```sh
 echo out > /sys/class/gpio/gpio25/direction
 ```
 
@@ -46,7 +50,6 @@ done
 
 ```sh
 echo 25 > /sys/class/gpio/unexport
-exit
 ```
 
 ## 操作
@@ -62,8 +65,10 @@ sudo python led2.py
 GPIO 24でスイッチの状態を読み取る。
 
 ```sh
-sudo su
 echo 24 > /sys/class/gpio/export
+```
+
+```sh
 echo in > /sys/class/gpio/gpio24/direction
 ```
 
@@ -75,7 +80,6 @@ cat /sys/class/gpio/gpio24/value
 
 ```sh
 echo 24 > /sys/class/gpio/unexport
-exit
 ```
 
 Pythonで試す。
