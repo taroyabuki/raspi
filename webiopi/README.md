@@ -4,10 +4,11 @@ Raspberry Pi 2では動作しない（2015/02/9）。
 
 ## インストールと起動・停止
 
+http://sourceforge.net/projects/webiopi/files/ からWebIOPiをダウンロードする（ここでは`WebIOPi-0.7.1.tar.gz`をダウンロードしたとする）。ファイルをTeraTermの「ファイル」→「SSH SCP」でRaspberry Piに転送する。
+
 ```sh
-wget "http://downloads.sourceforge.net/project/webiopi/WebIOPi-0.7.0.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fwebiopi%2Ffiles%2F&ts=1423473182&use_mirror=cznic" -O WebIOPi-0.7.0.tar.gz
-tar zxf WebIOPi-0.7.0.tar.gz
-cd WebIOPi-0.7.0
+tar zxf WebIOPi-0.7.1.tar.gz
+cd WebIOPi-0.7.1
 sudo ./setup.sh
 ```
 
