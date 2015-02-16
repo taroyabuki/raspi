@@ -6,9 +6,11 @@
 
 [Fritzing](http://fritzing.org/home/)を使ってブレッドボード用の回路図を描いてみる。
 
-## 操作（シェル）
+## 操作
 
 ![](image/led2_a.png)
+
+### シェル
 
 GPIO 25の利用を開始する。
 
@@ -52,7 +54,7 @@ done
 echo 25 > /sys/class/gpio/unexport
 ```
 
-## 操作
+### Python
 
 ```sh
 sudo python led2.py
@@ -63,6 +65,8 @@ sudo python led2.py
 **LEDを光らせた回路はそのままにしておいてよい。**
 
 ![](image/tact_a.png)
+
+### シェル
 
 GPIO 24でスイッチの状態を読み取る。
 
@@ -84,7 +88,7 @@ cat /sys/class/gpio/gpio24/value
 echo 24 > /sys/class/gpio/unexport
 ```
 
-Pythonで試す。
+### Python
 
 ```sh
 sudo python tact.py
